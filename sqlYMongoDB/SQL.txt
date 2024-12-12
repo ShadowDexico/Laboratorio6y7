@@ -1,0 +1,81 @@
+drop database if exists Mongolo;
+create database Mongolo;
+use Mongolo;
+
+-- Paso 1: Crear la tabla Estudiantes
+CREATE TABLE Estudiantes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50),
+    edad INT,
+    ciudad VARCHAR(50)
+);
+
+-- Paso 2: Insertar datos
+INSERT INTO Estudiantes (nombre, edad, ciudad)
+VALUES
+('Juan', 20, 'Bogotá'),
+('Ana', 22, 'Medellín'),
+('Luis', 19, 'Cali'),
+('Carlos', 21, 'Bogotá'),
+('Marta', 25, 'Medellín'),
+('Gustavo Ramírez', 32, 'Bogotá'),
+('Carmen Fernández', 23, 'Bucaramanga'),
+('Javier Sánchez', 34, 'Cartagena'),
+('Juan Gómez', 28, 'Cali'),
+('Teresa Ramírez', 29, 'Medellín'),
+('Antonio Díaz', 25, 'Bogotá'),
+('Isabel Fernández', 30, 'Barranquilla'),
+('Javier Torres', 32, 'Bucaramanga'),
+('Sergio González', 31, 'Medellín'),
+('Adriana Rodríguez', 33, 'Bogotá'),
+('Daniel Gómez', 22, 'Cartagena'),
+('Ricardo Martínez', 28, 'Barranquilla'),
+('Laura Pérez', 24, 'Bucaramanga'),
+('Raúl Díaz', 29, 'Medellín'),
+('Lucía Ramírez', 30, 'Bogotá'),
+('Samuel Sánchez', 33, 'Barranquilla'),
+('Carla Gómez', 21, 'Medellín'),
+('Javier Ramírez', 29, 'Cartagena'),
+('Nicolás Sánchez', 34, 'Bogotá'),
+('Hugo Rodríguez', 28, 'Barranquilla'),
+('Isabel Gómez', 32, 'Bucaramanga'),
+('Gabriela Torres', 26, 'Medellín'),
+('Luis Ramírez', 25, 'Bogotá'),
+('Juan Carlos López', 27, 'Cali'),
+('Silvia Sánchez', 28, 'Barranquilla'),
+('Beatriz Rodríguez', 30, 'Bucaramanga'),
+('José Hernández', 22, 'Medellín'),
+('Carmen González', 35, 'Bogotá'),
+('Gabriel Torres', 32, 'Barranquilla'),
+('Laura Sánchez', 24, 'Bucaramanga'),
+('Félix Ramírez', 29, 'Cali'),
+('Sergio Martínez', 28, 'Medellín'),
+('Elena Sánchez', 30, 'Bogotá'),
+('Ricardo López', 27, 'Barranquilla'),
+('Beatriz González', 25, 'Medellín'),
+('David Sánchez', 28, 'Bogotá'),
+('Laura Ramírez', 31, 'Barranquilla'),
+('Antonio Rodríguez', 29, 'Cali'),
+('Hugo Gómez', 32, 'Medellín'),
+('Teresa Sánchez', 34, 'Barranquilla'),
+('Hugo Ramírez', 27, 'Bucaramanga'),
+('Mariana Rodríguez', 33, 'Medellín'),
+('Samuel Torres', 25, 'Bogotá'),
+('Silvia Gómez', 30, 'Barranquilla'),
+('Juan Torres', 28, 'Cali'),
+('Francisco Sánchez', 32, 'Medellín'),
+('Isabel Pérez', 30, 'Barranquilla'),
+('Laura González', 27, 'Bucaramanga'),
+('Beatriz Ramírez', 28, 'Medellín');
+
+
+-- Paso 3: Consultar todos los registros
+SELECT * FROM Estudiantes;
+
+-- Paso 4: Filtrar estudiantes por ciudad
+SELECT * FROM Estudiantes
+WHERE ciudad = 'Bogotá';
+
+-- Paso 5: Consultar estudiantes mayores de 20 años
+SELECT * FROM Estudiantes
+WHERE edad > 20;
